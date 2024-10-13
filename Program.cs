@@ -12,7 +12,7 @@ namespace dataStructure
     {
         static void Main(string[] args)
         {
-            // Step 1: Process the command line arguments
+
             if (args.Length != 2 || !int.TryParse(args[0], out int numElements) || !int.TryParse(args[1], out int numTestElements))
             {
                 Console.WriteLine("Usage: <program> <numElements> <numTestElements>");
@@ -25,12 +25,10 @@ namespace dataStructure
                 return;
             }
 
-            // Step 2: Create data structures
             string[] stringArray = new string[numElements];
             List<string> stringList = new List<string>(numElements);
             ArrayList arrayList = new ArrayList(numElements);
 
-            // Step 3: Fill the data structures with random GUIDs
             for (int i = 0; i < numElements; i++)
             {
                 string guidString = Guid.NewGuid().ToString();
